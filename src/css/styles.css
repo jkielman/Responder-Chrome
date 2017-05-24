@@ -1,0 +1,49 @@
+:root {
+    --forground: #DDDBDD;
+    --light: #fff;
+    --background: #656A7B;
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif!important;
+}
+
+#windowDetector {
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+    background: var(--background);
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    color: var(--forground);
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 5px;
+    font-size: 12px;
+    z-index: 1000;
+    font-family: var(--font-stack);
+    line-height: auto!important;
+}
+
+#window-resizer-tooltip {
+    opacity: 0;
+}
+
+.userWidth::after, .userHeight::after {
+    content: "px";
+}
+
+.userWidthEm::after, .userHeightEm::after {
+    content: "em";
+}
+
+.x {
+    color: var(--light);
+    padding: 0 5px;
+}
+
+.divider {
+    color: var(--light);
+    font-weight: 600;
+    padding: 0 .4em;
+}
