@@ -5,11 +5,44 @@
     --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif!important;
 }
 
+body.responder, body.responder div, body.responder section, body.responder p, body.responder main, body.responder header, body.responder nav, body.responder footer, body.responder a {
+    outline: 1px rgba(124, 106, 255, 0.8) solid;
+    background-color: rgba(124, 106, 255, 0.08) !important;
+}
+
+#window-resizer-tooltip {
+    opacity: 0;
+}
+
+body #windowDetector {
+    opacity: 0;
+}
+
+body.responder #windowDetector {
+    opacity: 1.0;
+}
+
+html {
+    font-size: 100%;
+}
+
+body.responder {
+    background-position: left top;
+    background-image: -webkit-linear-gradient(0deg, transparent, transparent 7px, rgba(124, 106, 255, 0.25) 7px), linear-gradient(90deg, transparent, transparent 7px, rgba(124, 106, 255, 0.25) 7px);
+    background-image: -moz-linear-gradient(0deg, transparent, transparent 7px, rgba(124, 106, 255, 0.25) 7px), linear-gradient(90deg, transparent, transparent 7px, rgba(124, 106, 255, 0.25) 7px);
+    background-image: linear-gradient(0deg, transparent, transparent 7px, rgba(124, 106, 255, 0.25) 7px), linear-gradient(90deg, transparent, transparent 7px, rgba(124, 106, 255, 0.25) 7px);
+    background-size: 8px 8px;
+}
+
+body {
+    font-family: var(--font-stack);
+}
+
 #windowDetector {
     margin: 0;
     position: relative;
     box-sizing: border-box;
-    background: var(--background);
+    background: rgba(124, 106, 255, 1.0) !important;
     right: 0;
     bottom: 0;
     position: fixed;
@@ -23,10 +56,7 @@
     z-index: 1000;
     font-family: var(--font-stack);
     line-height: auto!important;
-}
-
-#window-resizer-tooltip {
-    opacity: 0;
+    border: 0 !important;
 }
 
 .userWidth::after, .userHeight::after {
@@ -43,7 +73,7 @@
 }
 
 .divider {
-    color: var(--light);
+    color: var(--dark);
     font-weight: 600;
     padding: 0 .4em;
 }

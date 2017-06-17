@@ -1,3 +1,4 @@
-# W/H - Width/Height Chrome Extension
+# Responder Chrome Extension
 
-A Chrome Extension that outputs the browsers width and height in both 'em' and 'px' units.
+Outlines the web pages grid and displays the width/height in both 'em' and 'px' units when the browser is resized.
+
