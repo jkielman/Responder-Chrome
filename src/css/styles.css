@@ -5,7 +5,39 @@
     --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif!important;
 }
 
-body.responder, body.responder div, body.responder section, body.responder p, body.responder main, body.responder header, body.responder nav, body.responder footer, body.responder a {
+body.responder,
+body.responder div,
+body.responder section,
+body.responder header,
+body.responder nav,
+body.responder main,
+body.responder h1,
+body.responder h2,
+body.responder h3,
+body.responder h4,
+body.responder h5,
+body.responder h6
+body.responder p,
+body.responder footer,
+body.responder a,
+body.responder blockquote,
+body.responder pre,
+body.responder table,
+body.responder tr,
+body.responder td,
+body.responder ul,
+body.responder li,
+body.responder ol,
+body.responder embed,
+body.responder form,
+body.responder canvas,
+body.responder label,
+body.responder article,
+body.responder audio,
+body.responder video,
+body.responder menu
+
+{
     outline: 1px rgba(124, 106, 255, 0.8) solid;
     background-color: rgba(124, 106, 255, 0.08) !important;
 }
@@ -44,7 +76,7 @@ body {
     box-sizing: border-box;
     background: rgba(124, 106, 255, 1.0) !important;
     right: 0;
-    bottom: 0;
+    top: 0;
     position: fixed;
     color: var(--forground);
     display: flex;

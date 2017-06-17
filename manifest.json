@@ -1,33 +1,30 @@
-// Responder - Outlines the web pages grid and displays the width/height in both 'em' and 'px' units when the browser is resized.
-
 {
-  "version": "1.5",
-  "manifest_version": 2,
-   "name": "Responder",
-   "description": "Outlines the web pages grid, displays the width/height in both 'em' and 'px' units when the browser is resized.",
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
-    "browser_action": {
-      "default_icon": "icons/icon16-active.png"
-    },
-  "permissions": [
-   "tabs",
-   "activeTab",
+  "name": "Responder",
+  "version": "1.6",
+ "manifest_version": 2,
+   "description": "Outlines the web pages grid, displays the width/height in both 'em' and 'px' units when the browser is resized",
+   "icons": {
+     "16": "icons/icon16.png",
+     "48": "icons/icon48.png",
+     "128": "icons/icon128.png"
+   },
+   "permissions": [
+    "tabs",
+    "activeTab",
    "http://*/",
-  "https://*/"
-      ],
-    "content_scripts": [
-    {
-      "matches": [
-                "http://*/*",
-                "https://*/*"
-            ],
-      "js": ["src/js/script.js"],
-      "css":["src/css/styles.css"],
-      "run_at" :"document_end"
-    }
-  ]
-}
+   "https://*/"
+     ],
+   "browser_action": {
+     "default_icon": "icons/icon16.png"
+   },
+   "content_scripts": [
+     { "run_at" :"document_end",
+       "matches": ["<all_urls>"],
+       "js": ["src/js/script.js"],
+       "css":["src/css/styles.css"]
+     }
+   ]
+ }
+
+
+
