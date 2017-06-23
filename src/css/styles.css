@@ -1,11 +1,17 @@
 :root {
     --forground: #DDDBDD;
     --light: #fff;
-    --background: #656A7B;
+    --purple: rgba(124, 106, 255, 1.0) !important;
+    --lightpurple: rgba(124, 106, 255, 1.0) !important;
+    --outline: 1px rgba(124, 106, 255, 0.8) solid;
     --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif!important;
 }
 
-body.responder,
+body.responder {
+    outline: var(--outline);
+    background-color: rgba(124, 106, 255, 0.02) !important;
+}
+
 body.responder div,
 body.responder section,
 body.responder header,
@@ -40,8 +46,8 @@ body.responder video,
 body.responder menu
 
 {
-    outline: 1px rgba(124, 106, 255, 0.8) solid;
-    background-color: rgba(124, 106, 255, 0.08) !important;
+    outline: var(--outline);
+    background-color: rgba(124, 106, 255, 0.06) !important;
 }
 
 #window-resizer-tooltip {
@@ -72,7 +78,7 @@ body {
     margin: 0;
     position: relative;
     box-sizing: border-box;
-    background: rgba(124, 106, 255, 1.0) !important;
+    background: var(--purple);
     right: 0;
     top: 0;
     position: fixed;
