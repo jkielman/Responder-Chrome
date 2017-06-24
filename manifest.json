@@ -1,6 +1,6 @@
 {
   "name": "Responder",
-  "version": "1.9",
+  "version": "2.3",
  "manifest_version": 2,
    "description": "Outlines the web pages grid and displays the width/height in both 'em' and 'px' units when the browser is resized.",
    "icons": {
