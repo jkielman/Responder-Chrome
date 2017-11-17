@@ -7,7 +7,6 @@
 }
 
 
-
 body.responder, body.responder-resize-on.responder-sz {
     outline: var(--outline);
     background-color: rgba(124, 106, 255, 0.02) !important;
