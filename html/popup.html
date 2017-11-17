@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Responder</title>
+	<style>
+	body {
+		padding:0; margin:0;
+	}
+	input{
+		cursor: pointer;
+	}
+	ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	}
+	.menu {
+		width: 175px;
+		animation: fadeIn 200ms ease;
+	}
+	.menu li {
+		border-bottom: 1px solid #E0E5EB;
+	}
+	.menu li:last-child {
+		border-bottom: 0;
+	}
+	.menu-button {
+		background: #fff;
+		cursor: pointer;
+		position: relative;
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+	input {
+		background: #fff;
+		border: 0;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+		font-size: 15px;
+		font-family: "Helvetica Neue",HelveticaNeue,Helvetica,Arial,sans-serif;
+		padding: 15px 0 17px 35px;
+		width: 100%;
+		text-align: left;
+	}
+	input:hover {
+		background: #F4F8FF;
+	}
+	input:focus {
+		outline:0;
+	}
+	#toggle-display.active, #show-on-resize.active {
+		background:#F4F8FF url('../img/check.svg') no-repeat 13px 17px;
+	}
+	</style>
+</head>
+<body>
+	<ul class="menu">
+		<li  class ="menu-button">
+			<input id="toggle-display" type=button value="Toggle display">
+		</li>
+		<li  class ="menu-button">
+			<input id="show-on-resize" type=button value="Show on resize">
+		</li>
+	</ul>
+	<script src="../js/popup.js"></script>
+</body>
+</html>
