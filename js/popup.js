@@ -37,6 +37,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    function callback() {
+                if (chrome.runtime.lastError) {
+                        console.log(chrome.runtime.lastError.message);
+                } else {
+
+                }
+    }
+
 
     const buttonOne = document.getElementById('toggle-display');
     if (buttonOne) {
@@ -56,13 +64,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 for (var i = 0; i < tabs.length; i++) {
                     chrome.tabs.executeScript(tabs[i].id, {
                         code: 'document.querySelector("body").classList.toggle("responder");document.querySelector("body").classList.toggle("responder-resize-off");'
-                    });
+                    }, callback);
                 }
 
                 for (var j = 0; j < tabs.length; j++) {
                     chrome.tabs.executeScript(tabs[j].id, {
                         file: 'js/responder.js'
-                    });
+                    }, callback);
                 }
 
             });
@@ -104,14 +112,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 for (var j = 0; j < tabs.length; j++) {
                     chrome.tabs.executeScript(tabs[j].id, {
                         code: 'document.querySelector("body").classList.toggle("responder-resize-on"); '
-                    });
+                    }, callback);
                 }
 
 
                 for (var i = 0; i < tabs.length; i++) {
                     chrome.tabs.executeScript(tabs[i].id, {
                         file: 'js/responder-sz.js'
-                    });
+                    }, callback);
                 }
 
 
