@@ -1,11 +1,15 @@
 :root {
     --forground: #DDDBDD;
     --light: #fff;
-    --lightpurple: rgba(124, 106, 255, 1.0) !important;
+    --lightpurple: rgba(124, 106, 255, 1.0);
     --outline: 1px rgba(124, 106, 255, 0.8) solid;
-    --font-stack: -apple-system, BlinkMacSystemFont,  Helvetica, Arial, sans-serif!important;
+    --greyoutline:1px #E0E5EB solid;
+    --white:#fff;
+    --menuhover:#F4F8FF;
+    --font-stack: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif!important;
 }
 
+/*-------Responder Tool*/
 
 body.responder, body.responder-resize-on.responder-sz {
     outline: var(--outline);
@@ -76,7 +80,6 @@ body.responder-resize-on.responder-sz article,
 body.responder-resize-on.responder-sz audio,
 body.responder-resize-on.responder-sz video,
 body.responder-resize-on.responder-sz menu
-
 {
     outline: var(--outline);
     background-color: rgba(124, 106, 255, 0.06) !important;
@@ -111,7 +114,7 @@ body {
     margin: 0;
     position: relative;
     box-sizing: border-box;
-    background: rgba(124, 106, 255, 1.0) !important;
+    background: var(--lightpurple) !important;
     right: 0;
     top: 0;
     position: fixed;
@@ -148,12 +151,11 @@ body {
 }
 
 
-
 #windowDetector1 {
     margin: 0;
     position: relative;
     box-sizing: border-box;
-    background: rgba(124, 106, 255, 1.0) !important;
+    background: var(--lightpurple) !important;
     right: 0;
     top: 0;
     position: fixed;
@@ -183,3 +185,61 @@ body {
     padding: 0 5px;
 }
 
+
+/*-------Responder Menu*/
+
+body#responder-menu-body {
+        padding:0; margin:0;
+}
+
+.responder-menu-button input {
+        cursor: pointer;
+}
+ul.responder-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.responder-menu {
+    width: 175px;
+    animation: fadeIn 200ms ease;
+}
+.responder-menu li {
+    border-bottom: var(--greyoutline);
+}
+.responder-menu li:last-child {
+    border-bottom: 0;
+}
+.responder-menu-button {
+    background: var(--white);
+    cursor: pointer;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.responder-menu-button input {
+    background: var(--white);
+    border: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: var(--font-stack);
+    padding: 15px 0 17px 35px;
+    width: 100%;
+    text-align: left;
+}
+
+.responder-menu-button input:hover {
+    background: var(--menuhover);
+}
+
+.responder-menu-button input:focus {
+    outline:0;
+}
+
+#toggle-display.active, #show-on-resize.active {
+    background: var(--menuhover) url('../img/check.svg') no-repeat 13px 17px;
+}
