@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 //.insertCSS
                 for (var e = 0; e < tabs.length; e++) {
                     chrome.tabs.insertCSS(tabs[e].id, {
-                        file: 'css/rstyles.css'
+                        file: 'css/styles.css'
                     }, callback);
                 }
 
