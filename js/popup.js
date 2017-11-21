@@ -61,15 +61,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
             chrome.tabs.query({}, function(tabs) {
 
+                //.executeScript
                 for (var i = 0; i < tabs.length; i++) {
                     chrome.tabs.executeScript(tabs[i].id, {
                         code: 'document.querySelector("body").classList.toggle("responder");document.querySelector("body").classList.toggle("responder-resize-off");'
                     }, callback);
                 }
 
+                //.executeScript
                 for (var j = 0; j < tabs.length; j++) {
                     chrome.tabs.executeScript(tabs[j].id, {
                         file: 'js/responder.js'
+                    }, callback);
+                }
+
+                //.insertCSS
+                for (var e = 0; e < tabs.length; e++) {
+                    chrome.tabs.insertCSS(tabs[e].id, {
+                        file: 'css/rstyles.css'
                     }, callback);
                 }
 
@@ -109,19 +118,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
             chrome.tabs.query({}, function(tabs) {
 
+                //.executeScript
                 for (var j = 0; j < tabs.length; j++) {
                     chrome.tabs.executeScript(tabs[j].id, {
                         code: 'document.querySelector("body").classList.toggle("responder-resize-on"); '
                     }, callback);
                 }
 
-
+                //.executeScript
                 for (var i = 0; i < tabs.length; i++) {
                     chrome.tabs.executeScript(tabs[i].id, {
                         file: 'js/responder-sz.js'
                     }, callback);
                 }
 
+                //.insertCSS
+                for (var e = 0; e < tabs.length; e++) {
+                    chrome.tabs.insertCSS(tabs[e].id, {
+                        file: 'css/styles.css'
+                    }, callback);
+                }
 
             });
 

@@ -47,6 +47,6 @@
     "js/popup.js",
     "js/responder-sz.js",
     "js/responder.js",
-    "js/sotrage.js"
+    "js/storage.js"
   ]
 }
