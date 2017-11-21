@@ -241,5 +241,5 @@ ul.responder-menu {
 }
 
 #toggle-display.active, #show-on-resize.active {
-    background: var(--menuhover) url('../img/check.svg') no-repeat 13px 17px;
+    background: var(--menuhover) url('../assets/check.svg') no-repeat 13px 17px;
 }
