@@ -10,7 +10,7 @@
     "default_icon": {
       "48": "assets/icon48.png"
     },
-    "default_popup": "html/popup.html"
+    "default_popup": "popup.html"
   },
   "content_scripts": [
     {
