@@ -19,9 +19,9 @@
       ],
       "css":["css/styles.css"],
       "matches": [
-        "<all_urls>",
         "http://*/*",
         "https://*/*",
+        "<all_urls>",
         "*://*/*"
       ],
       "run_at": "document_end"
