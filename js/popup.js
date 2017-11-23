@@ -1,6 +1,7 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function() {
+
+document.addEventListener('DOMContentLoaded', () => {
 
 
     //Storage on for 1
@@ -50,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (buttonOne) {
 
         //Event for Storage 1
-        buttonOne.addEventListener('click', function() {
+        buttonOne.addEventListener('click', () => {
 
             if (document.getElementById('show-on-resize').classList.contains("active")) {
                 document.getElementById('show-on-resize').dispatchEvent(new Event('click'));
@@ -114,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const buttonTwo = document.getElementById('show-on-resize');
     if (buttonTwo) {
         //Event for Storage 2
-        buttonTwo.addEventListener('click', function() {
+        buttonTwo.addEventListener('click', () => {
 
             chrome.tabs.query({}, function(tabs) {
 
